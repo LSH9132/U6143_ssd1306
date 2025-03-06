@@ -437,8 +437,8 @@ char* GetIpAddress(void)
       fd = socket(AF_INET, SOCK_DGRAM, 0);
       /* I want to get an IPv4 IP address */
       ifr.ifr_addr.sa_family = AF_INET;
-      /* I want IP address attached to "br0" */  // eth0를 br0로 변경
-      strncpy(ifr.ifr_name, "br0", IFNAMSIZ-1);  // eth0를 br0로 변경
+      /* I want IP address attached to "br0" */
+      strncpy(ifr.ifr_name, "mgmt-br", IFNAMSIZ-1); 
       symbol=ioctl(fd, SIOCGIFADDR, &ifr);
       close(fd);
       if(symbol==0)
