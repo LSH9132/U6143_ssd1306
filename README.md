@@ -1,4 +1,4 @@
-# U6143_ssd1306
+# U6143_ssd1306 for lab
 ## Preparation
 ```bash
 sudo raspi-config
